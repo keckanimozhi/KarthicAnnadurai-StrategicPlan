@@ -114,8 +114,8 @@
 					<label for="Remarks-1">
 						Remarks
 					</label>
-					<!---<input class="form-control" id="Remarks-1" name="Remarks-1" type="text"/> 
-                                        <input type="text" id="Remarks-1" name="Remarks-1" value="<?php echo $_POST['Remarks-1'];?>" />  --->
+	<!--			<input class="form-control" id="Remarks-1" name="Remarks-1" type="text"/> 
+                                        <input type="text" id="Remarks-1" name="Remarks-1" value="<?php echo $_POST['Remarks-1'];?>" />  -->
                                         <textarea class="form-control" id="Remarks-1" name="Remarks-1" rows="3" cols="30" ></textarea> 
                                                   
           <input type="hidden" name="catg" value="5.1"/>
@@ -137,7 +137,7 @@
 						<div class="panel-body">
 							<b>Action Plan / Goals:</b>
                         <p>To plan the curriculum accordingly for the next regulation.</p>
-	<!---		<form role="form" action="form-5.1.2.php" method="POST">
+		<form role="form" action="form-5.1.2.php" method="POST">
 				<div class="form-group">
 
 					<label for="Remarks-1">
@@ -158,12 +158,17 @@
 					Save
 				</button>
 			</form>
- ----->
 
     <div class="container-fluid">
 
 	<div class="row">
-           
+		<div class="col-md-9">
+         <div class="form-group">
+		<label for="rc">
+		current nmber of rows:
+		</label>
+		   <input type="number" disabled="disabled" name="Current-row-1" id="rc" value="">
+          </div>     
 		<div class="col-md-9">
 
 			<table id="row_table_1" class="table table-hover table-condensed table-striped table-bordered" style=" border-collapse: collapse;">
