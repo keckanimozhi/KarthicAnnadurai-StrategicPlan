@@ -12,7 +12,9 @@ $(document).ready(function(){
                             '<td class="col_4"><input type="text" name="txtbx4-' + cnt_1 + '" value="' + cnt + '"></td>'+
 							'<td class="col_5"><input type="text" name="txtbx5-' + cnt_1 + '" value="' + cnt + '"></td>'+
                             '</tr>');
+                    $('#rc').attr('value', cnt_1);
                     cnt_1++;
+                    
                 });
             $("#anc_em").click(function() {
                 if(cnt_1>1)
@@ -20,7 +22,9 @@ $(document).ready(function(){
                 
                 {$('#row_table_1 tr:last-child').remove();
                   
-               cnt_1--;}
+               cnt_1--;
+                  $('#rc').attr('value', cnt_1);
+           }
                 else 
                     alert("No more rows to remove");
                 });
