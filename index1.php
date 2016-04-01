@@ -40,7 +40,7 @@ $input_user_password = method("Password");
 		 
 		// mysqli_select_db($link,'login1') or die("Unable to select database");
 		 
-         mysqli_select_db($this->mysql_connect, 'startegicplan') or die("could not select the database");
+         mysqli_select_db($this->mysql_connect, 'testsql') or die("could not select the database");
  
         if(mysqli_connect_errno()){
         //    echo "<br> fail in connection with the database"+  mysqli_connect_errno();
@@ -92,7 +92,8 @@ if ($user_name == $row[0])
 	    	$_SESSION["user_name"] = $user_name;
 	    	$_SESSION["month"] = method('Month');
 	    	echo "<br>".$_SESSION["month"];
-		    header('Location:5_3_1.html');
+	    	
+		    header('Location:5.1.html');
 		    exit;
 		   }
 	//	else

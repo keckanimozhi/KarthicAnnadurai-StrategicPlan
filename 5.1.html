@@ -163,14 +163,13 @@
     <div class="container-fluid">
 
 	<div class="row">
-           
+
 		<div class="col-md-9">
         <form action="row_table_1.php" method="POST">
-        <div class="form-group">
-         <div >
-          <input type="number" disabled="disabled" name="cr" value="" id='rc'>
-         </div>
-        </div>
+                                      <input type="hidden" name="catg" value="5.1"/>
+                                     <input type="hidden" name="aspects" value="2"/>
+                                     <input type="hidden" name="table-count" value="1"/>
+                                     <input type="hidden" disabled="disabled" name="crow" value="" id='rc'>
 			<table id="row_table_1" class="table table-hover table-condensed table-striped table-bordered" style=" border-collapse: collapse;">
 				<thead>
 					<tr >
@@ -195,6 +194,10 @@
 
 				</tbody>
 			</table>
+ <div class="col-md-3">
+          <a href="javascript:void(0);" id='anc_dd' data-toggle="tooltip" data-title="adding the row">Add Row</a><br>
+        <a href="javascript:void(0);" id='anc_em' data-placement="bottom" data-toggle="tooltip" data-title="removing the row(careful)">Remove Row</a>
+		   </div>
 				<button type="submit" class="btn btn-danger">
 					Save table
 				</button>
@@ -202,10 +205,7 @@
 		</div>
 	</div>
 </div>
- <div class="col-md-2">
-          <a href="javascript:void(0);" id='anc_dd' data-toggle="tooltip" data-title="adding the row">Add Row</a>
-        <a href="javascript:void(0);" id='anc_em' data-placement="bottom" data-toggle="tooltip" data-title="removing the row(careful)">Remove Row</a>
-		   </div>
+
 
 
 						</div>

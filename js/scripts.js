@@ -21,8 +21,8 @@ $(document).ready(function(){
                    
                 
                 {$('#row_table_1 tr:last-child').remove();
-                  $('#rc').attr('value', cnt_1);
-               cnt_1--;
+                  
+               cnt_1--;$('#rc').attr('value', cnt_1-1);
                   
            }
                 else 
