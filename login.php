@@ -1,7 +1,7 @@
 <?php
 
   function method($a){
-    return $_POST[$a];
+    return $_POST[$a] ;
   }  
  
 if ($_SERVER["REQUEST_METHOD"] == "POST")
@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 $input_user_name =  method("UserName");
 //$input_user_month = method("Month");
 // $input_user_year = method("Year");
-$input_user_password = method("Password");
+$input_user_password = method("Password") ;
 
 /* (isset($input_user_name)) or die("<p>No user name</p>"); */
 //(isset($input_user_password)) or die("<p>No password </p>");
@@ -88,6 +88,8 @@ if ($user_name == $row[0])
 	    {
 		//   echo "valid user and password";
 		 //   $flag=1;
+	    	$_SESSION["user_name"] = $user_name;
+	    	$_SESSION["month"] = method('Month');
 		    header('Location:5_3_1.html');
 		    exit;
 		   }
@@ -160,7 +162,7 @@ $check->checkLogin($input_user_name, $input_user_password);
 					
 					<div>
 						<span>S</span><span>tatus Report as on
-				     
+		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
 			<select name="Month">
                        <option value="January">31st January</option>
                         <option value="February">29th February</option>
@@ -175,6 +177,7 @@ $check->checkLogin($input_user_name, $input_user_password);
                        <option value="November" >30th November</option>
                        <option value="December" >31st December</option>
                      </select>
+        </form>
 			     </span>					</div>
 				</div>
 			</h3>
