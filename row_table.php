@@ -15,7 +15,9 @@ $sql_connect->select_db( "testsql");
 $user_name = $_SESSION["user_name"];
 $month = $_SESSION["month"];
 
-echo "total_columns are selected are: ".$total_col;
+echo "<br>table count are: ".$table_count;
+echo "<br>total columns are selected are: ".$total_col;
+echo "<br>total rows are: ".$i;
 
 function dynamicCol($total_cols){
 	if($total_cols == 6){
