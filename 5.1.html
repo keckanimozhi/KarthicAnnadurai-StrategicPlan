@@ -108,7 +108,7 @@
 						<b>Action Plan / Goals:</b>
                         <p>To implement a structured programme for Maths in 2015-16.
                             Syllabi to be framed by Mathematics department with the involvement of MTS and E&I departments</p>
-				<form role="form" action="form-5.1.1.php" method="POST">
+				<form role="form" action="field-1.php" method="POST">
 				<div class="form-group">
 
 					<label for="Remarks-1">
@@ -160,7 +160,7 @@
 			</form>
 
     <div class="container-fluid">
-
+<input type="hidden" name="total-table" value="1">
 	<div class="row">
 		<div class="col-md-9">
          <div class="form-group">
@@ -170,7 +170,7 @@
 		   <input type="number" disabled="disabled" name="Current-row-1" id="rc" value="">
           </div>     
 		<div class="col-md-9">
-
+  
 			<table id="row_table_1" class="table table-hover table-condensed table-striped table-bordered" style=" border-collapse: collapse;">
 				<thead>
 					<tr >
@@ -240,7 +240,15 @@
         <a href="javascript:void(0);" id='remove_row_table_22' data-placement="bottom" data-toggle="tooltip" data-title="removing the row(careful)">Remove Row</a>
 		   </div>
 		<div class="col-md-9">
-
+		
+  
+          <form action="row_table_22.php" method="POST">  
+         <div class="form-group">
+		<label >
+		current nmber of rows:
+		</label>
+		   <input type="number" disabled="disabled" name="Current-row-2" class="rco" value="">
+          </div> 
 			<table id="row_table_22" class="table table-hover table-condensed table-striped table-bordered" style=" border-collapse: collapse;">
 				<thead>
 					<tr >
@@ -260,6 +268,7 @@
 
 				</tbody>
 			</table>
+			</form>
 		</div>
 	</div>
 </div>
@@ -279,7 +288,7 @@
         <a href="javascript:void(0);" id='remove_row_table_23' data-placement="bottom" data-toggle="tooltip" data-title="removing the row(careful)">Remove Row</a>
 		   </div>
 		<div class="col-md-9">
-
+          
 			<table id="row_table_23" class="table table-hover table-condensed table-striped table-bordered" style=" border-collapse: collapse;">
 				<thead>
 					<tr >
