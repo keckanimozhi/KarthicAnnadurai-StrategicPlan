@@ -115,7 +115,7 @@
 						Remarks
 					</label>
 					<!---<input class="form-control" id="Remarks-1" name="Remarks-1" type="text"/> 
-                                        <input type="text" id="Remarks-1" name="Remarks-1" value="<?php echo $_POST['Remarks-1'];?>" />  --->
+                                        <input type="text" id="Remarks-1" name="Remarks-1" value="<?php echo $_POST['Remarks-1'];?>" />  -->
                                         <textarea class="form-control" id="Remarks-1" name="Remarks-1" rows="3" cols="30" ></textarea> 
                                                   
           <input type="hidden" name="catg" value="5.1"/>
@@ -158,14 +158,19 @@
 					Save
 				</button>
 			</form>
- ----->
+ ---->
 
     <div class="container-fluid">
 
 	<div class="row">
            
 		<div class="col-md-9">
-
+        <form action="row_table_1.php" method="POST">
+        <div class="form-group">
+         <div >
+          <input type="number" disabled="disabled" name="cr" value="" id='rc'>
+         </div>
+        </div>
 			<table id="row_table_1" class="table table-hover table-condensed table-striped table-bordered" style=" border-collapse: collapse;">
 				<thead>
 					<tr >
@@ -190,6 +195,10 @@
 
 				</tbody>
 			</table>
+				<button type="submit" class="btn btn-danger">
+					Save table
+				</button>
+		</form>
 		</div>
 	</div>
 </div>

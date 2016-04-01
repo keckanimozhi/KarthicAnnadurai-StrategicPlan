@@ -17,13 +17,13 @@ $(document).ready(function(){
                     
                 });
             $("#anc_em").click(function() {
-                if(cnt_1>=1)
+                if(cnt_1>1)
                    
                 
                 {$('#row_table_1 tr:last-child').remove();
-                    
-               cnt_1--;$('#rc').attr('value', cnt_1-1);
-                
+                  $('#rc').attr('value', cnt_1);
+               cnt_1--;
+                  
            }
                 else 
                     alert("No more rows to remove");
@@ -36,14 +36,14 @@ $(document).ready(function(){
                             '<td class="col_2"><input type="text" name="txtbx2-' + cnt_2 + '" value="' + cnt + '">'+
                             '</td><td class="col_3"><input type="text" name="txtbx3-' + cnt_2 + '" value="' + cnt + '"></td>'+
                             '<td class="col_4"><input type="text" name="txtbx4-' + cnt_2 + '" value="' + cnt + '"></td>'+
-                            '</tr>'); $('.rco').attr('value', cnt_2);
+                            '</tr>');
                     cnt_2++;
                 });
       $("#remove_row_table_2").click(function() {
           if(cnt_2>1)
           {  $('#row_table_2 tr:last-child').remove();
                   
-               cnt_2--;$('.rco').attr('value', cnt_2-1);}
+               cnt_2--;}
            else
                alert("No more rows to remove");
                
