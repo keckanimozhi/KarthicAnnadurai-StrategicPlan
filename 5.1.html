@@ -114,7 +114,7 @@
 					<label for="Remarks-1">
 						Remarks
 					</label>
-	<!--			<input class="form-control" id="Remarks-1" name="Remarks-1" type="text"/> 
+					<!---<input class="form-control" id="Remarks-1" name="Remarks-1" type="text"/> 
                                         <input type="text" id="Remarks-1" name="Remarks-1" value="<?php echo $_POST['Remarks-1'];?>" />  -->
                                         <textarea class="form-control" id="Remarks-1" name="Remarks-1" rows="3" cols="30" ></textarea> 
                                                   
@@ -137,7 +137,7 @@
 						<div class="panel-body">
 							<b>Action Plan / Goals:</b>
                         <p>To plan the curriculum accordingly for the next regulation.</p>
-		<form role="form" action="form-5.1.2.php" method="POST">
+	<!---		<form role="form" action="form-5.1.2.php" method="POST">
 				<div class="form-group">
 
 					<label for="Remarks-1">
@@ -158,19 +158,19 @@
 					Save
 				</button>
 			</form>
+ ---->
 
     <div class="container-fluid">
 <input type="hidden" name="total-table" value="1">
 	<div class="row">
-		<div class="col-md-9">
-         <div class="form-group">
-		<label for="rc">
-		current nmber of rows:
-		</label>
-		   <input type="number" disabled="disabled" name="Current-row-1" id="rc" value="">
-          </div>     
-		<div class="col-md-9">
 
+		<div class="col-md-9">
+        <form action="row_table.php" method="POST">
+                                      <input type="hidden" name="catg" value="5.1"/>
+                                     <input type="hidden" name="aspects" value="2"/>
+                                     <input type="hidden" name="total-col" value="5"/>
+                                     <input type="hidden" name="table-count" value="1"/>
+                                    Number of rows: <input type="hidden"  name="cr"  id='rc'/>
 			<table id="row_table_1" class="table table-hover table-condensed table-striped table-bordered" style=" border-collapse: collapse;">
 				<thead>
 					<tr >
@@ -195,13 +195,18 @@
 
 				</tbody>
 			</table>
+ <div class="col-md-3">
+          <a href="javascript:void(0);" id='anc_dd' data-toggle="tooltip" data-title="adding the row">Add Row</a><br>
+        <a href="javascript:void(0);" id='anc_em' data-placement="bottom" data-toggle="tooltip" data-title="removing the row(careful)">Remove Row</a>
+		   </div>
+				<button type="submit" class="btn btn-danger">
+					Save table
+				</button>
+		</form>
 		</div>
 	</div>
 </div>
- <div class="col-md-2">
-          <a href="javascript:void(0);" id='anc_dd' data-toggle="tooltip" data-title="adding the row">Add Row</a>
-        <a href="javascript:void(0);" id='anc_em' data-placement="bottom" data-toggle="tooltip" data-title="removing the row(careful)">Remove Row</a>
-		   </div>
+
 
 
 						</div>
@@ -219,19 +224,7 @@
                      				<p>i)	Each department to create e-content for one course per semester </P>
 						<P>ii)	CSE department to create the BYOD facility</P>
 						<P>iii)	One full-fledged studio with recording, streaming, archiving, and video conferencing facility to be created for the college (2016-17).</p>
-						
-			<form role="form" action="form-5.1.3.php" method="POST">
-				<div class="form-group">
-
-					<label for="No.ofcoursesforwhich_e-content_created">
-						No. of courses for which e-content created
-					</label>
-                                    
-					 <input type="text" name="text1" id="text1">
-					 </div>
-					  <input type="hidden" name="catg" value="5.1"/>
-                                     <input type="hidden" name="aspects" value="4"/>
-                                     
+						          
         <div class="container-fluid">
 
 	<div class="row">
@@ -240,7 +233,20 @@
         <a href="javascript:void(0);" id='remove_row_table_22' data-placement="bottom" data-toggle="tooltip" data-title="removing the row(careful)">Remove Row</a>
 		   </div>
 		<div class="col-md-9">
+		<form role="form" action="row_table.php" method="POST">
+                                      <input type="hidden" name="catg" value="5.1"/>
+                                     <input type="hidden" name="aspects" value="4"/>
+                                     <input type="hidden" name="table-count" value="2"/>
+                                     <input type="hidden" name="total-col" value="3"/>
+                                    Number of rows:  <input type="text"  name="cr"  id="r"/>
+				<div class="form-group">
 
+					<label for="No.ofcoursesforwhich_e-content_created">
+						No. of courses for which e-content created
+					</label>
+                                    
+					 <input type="text" name="text1" id="text1">
+					 </div>
 			<table id="row_table_22" class="table table-hover table-condensed table-striped table-bordered" style=" border-collapse: collapse;">
 				<thead>
 					<tr >
@@ -260,6 +266,10 @@
 
 				</tbody>
 			</table>
+				<button type="submit" class="btn btn-danger">
+					Save table
+				</button>
+			</form>
 		</div>
 	</div>
 </div>
@@ -279,7 +289,12 @@
         <a href="javascript:void(0);" id='remove_row_table_23' data-placement="bottom" data-toggle="tooltip" data-title="removing the row(careful)">Remove Row</a>
 		   </div>
 		<div class="col-md-9">
-
+		<form role="form" action="row_table.php" method="POST">
+                                      <input type="hidden" name="catg" value="5.1"/>
+                                     <input type="hidden" name="aspects" value="4"/>
+                                     <input type="hidden" name="table-count" value="3"/>
+                                     <input type="hidden" name="total-col" value="4"/>
+                                    Number of rows: <input type="text"  name="cr"  id='rc-23'/>
 			<table id="row_table_23" class="table table-hover table-condensed table-striped table-bordered" style=" border-collapse: collapse;">
 				<thead>
 					<tr >
@@ -301,6 +316,10 @@
 
 				</tbody>
 			</table>
+				<button type="submit" class="btn btn-danger">
+					Save table
+				</button>
+		 </form>
 		</div>
 	</div>
 </div>		
